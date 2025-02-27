@@ -1,23 +1,26 @@
 # ベースイメージ
-FROM rasa/rasa:3.5.10
+FROM python:3.10
 
 # 作業ディレクトリ
 WORKDIR /app
 
-# 必要なファイルをコピー
+# ファイルをコンテナ内にコピー
 COPY . /app
 
-# 追加のPythonパッケージをインストール
+# 権限の設定
 USER root
-# Dockerfile の一部
+
+# pip のアップグレードを追加
+RUN pip install --upgrade pip
+
+# 必要なパッケージをインストール
 RUN pip install -r requirements.txt
-# RUN pip install --no-cache-dir ja-ginza
 
-# Rasaのモデルをトレーニング
-# RUN rasa train
+# ja-ginza のインストール
+RUN pip install --no-cache-dir ja-ginza
 
-# ポートの公開
+# ポートを開放
 EXPOSE 5005
 
-# Rasaサーバーを起動
-CMD ["run", "--enable-api", "--cors", "*"]
+# Rasa の起動コマンド
+CMD ["rasa", "run", "--enable-api", "--cors", "*", "--debug"]
