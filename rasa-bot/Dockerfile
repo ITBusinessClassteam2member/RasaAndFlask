@@ -12,7 +12,7 @@ USER root
 RUN pip install --no-cache-dir ja-ginza
 
 # Rasaのモデルをトレーニング
-RUN rasa train
+# RUN rasa train
 
 # ポートの公開
 EXPOSE 5005
