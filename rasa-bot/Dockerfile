@@ -1,5 +1,5 @@
 # ベースイメージ
-FROM rasa/rasa:3.5.10
+FROM rasa/rasa:3.10.10
 
 # 作業ディレクトリ
 WORKDIR /app
