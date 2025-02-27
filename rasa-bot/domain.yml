@@ -1,0 +1,125 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodevening
+  - ask_reserve
+  - nlu_fallback
+  - thanks
+  - CG演習
+  - FEとPJの違い
+  - インターネットは利用できますか？
+  - オープンキャンパス
+  - ゲーム制作
+  - コンカレの中退率
+  - パソコンを購入する必要がありますか？
+  - パソコン初心者でも大丈夫なのか
+  - パソコン講座
+  - プログラミングは得意になりますか
+  - 今ある課題の提出期限を教えて
+  - 出席は取るんですか？
+  - 夏休み、冬休み等はいつから、どれくらいありますか？
+  - 学生が主体になって行うイベントなどありますか？
+  - 年間行事
+  - 授業時間は何時から何時まで？
+  - 最寄駅から徒歩何分か
+  - 私たちの研究でSDGsに貢献できますか？
+  - 科目履修
+  - 翡翠ネトについて
+  - 車での通学はできますか？
+  - 近くには何がある?
+  - 過去の就職先
+  - 食堂
+  - 高校のように担任の先生がいるのですか?
+  - 入学について
+  - ask_fortune
+
+
+entities:
+  - Time
+
+slots:
+  reserv_time:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: Time
+
+responses:
+  utter_greet:
+    - text: "こんねと～～！今日はどのようなご用件ねと？"
+  utter_goodevening:
+    - text: "こんばんは！"
+  utter_reserve:
+    - text: "予約したい時間を入力してください。"
+  utter_default:
+    - text: "すみません。よくわかりませんでした。"
+  utter_thanks:
+    - text: "どういたしましてねと！他に質問はあるねと？"
+  utter_CG演習:
+    - text: "PhotoshopとIllustratorを使ってデジタルの作品作成やポスター作り、CGクリエイター検定の取得ねと。"
+  utter_FEとPJの違い:
+    - text: "基本情報技術者試験を目指すかどうかで分かれているねと。"
+  utter_インターネットは利用できますか？:
+    - text: "ブロードバンドでインターネットに常時接続しているねと。休み時間や放課後などいつでも自由に利用できるねと。また、各学生にひとつずつメールアドレスが与えられるねと。"
+  utter_オープンキャンパス:
+    - text: <a href="https://www.iwaki-cc.ac.jp/app/wp-content/uploads/2024/04/%E3%83%9D%E3%82%B9%E3%82%BF%E3%83%BC%E6%9C%80%E7%B5%82PNG%E5%8C%96.png">こちらがオープンキャンパスの予定ねと</a>
+  utter_ゲーム制作:
+    - text: "HTMLのゲームエンジンであるenchant.jsやunreal engineを使ってのゲーム作りやPremiere Proを使った動画編集をするねと。"
+  utter_コンカレの中退率:
+    - text: "33期生の中退率は約2割ねと。"
+  utter_パソコンを購入する必要がありますか？:
+    - text: "入学時に購入いただく必要はないねと。カレッジのパソコンで十分勉強できるねと。"
+  utter_パソコン初心者でも大丈夫なのか:
+    - text: "カレッジの教職員がわかりやすく一から丁寧に教えてくれるので安心ねと。"
+  utter_パソコン講座:
+    - text: <a href="https://www.iwaki-cc.ac.jp/app/wp-content/uploads/2024/04/2024_PC%E8%AC%9B%E5%BA%A7%E3%83%81%E3%83%A9%E3%82%B7-731x1024.png">こちらがパソコン講座の予定ねと</a>
+  utter_プログラミングは得意になりますか:
+    - text: "その人の努力次第ねと。"
+  utter_今ある課題の提出期限を教えて:
+    - text: "現在Wordpressの課題が残っているねと　　　期限は〇月✖日ねと"
+  utter_出席は取るんですか？:
+    - text: "出席は重視してるねと。進級、卒業はすべての科目で出席率80％以上となることが条件のひとつねと。"
+  utter_夏休み、冬休み等はいつから、どれくらいありますか？:
+    - text: "夏休みは、お盆前後に約１ヶ月、冬休みは正月前後に約２週間あるねと。長期休暇期間中も登校して自習することは可能ねと。"
+  utter_学生が主体になって行うイベントなどありますか？:
+    - text: "学生会が中心となって計画、実施するスポーツ大会や、コンカレ祭り（文化祭）、スキー教室など、楽しいイベントが数多く実施しているねと。"
+  utter_年間行事:
+    - text: <a href="https://www.iwaki-cc.ac.jp/app/wp-content/uploads/2024/04/2024%E5%B9%B4%E9%96%93%E8%A1%8C%E4%BA%8B%E4%BA%88%E5%AE%9A-_%E5%AD%A6%E7%94%9F%E7%94%A8.pdf">こちらが年間行事の予定ねと</a>
+  utter_授業時間は何時から何時まで？:
+    - text: "月、水、金は　午前8時30分から午後4時45分まで。火、木は午前8時30分から午後4時5分までねと。50分授業が1日あたり7コマ組まれているねと。"
+  utter_最寄駅から徒歩何分か:
+    - text: "徒歩5~7分で着くねと。"
+  utter_私たちの研究でSDGsに貢献できますか？:
+    - text: <a href="https://raw.githubusercontent.com/neto-cc/LINEBOT/main/images/images.png">SDGsの4番に貢献できると思うねと。</a>
+  utter_科目履修:
+    - text: <a href="https://www.iwaki-cc.ac.jp/app/wp-content/uploads/2024/08/R06_%E7%A7%91%E7%9B%AE%E5%B1%A5%E4%BF%AE%E5%BE%8C%E6%9C%9FA4%E7%B8%A6%E7%89%88_%E3%83%9A%E3%83%BC%E3%82%B8_2-724x1024.png">こちらが科目履修の予定ねと</a>
+  utter_翡翠ネトについて:
+    - text: "バグデータに意思が宿って生まれたのが私ねと。"
+  utter_車での通学はできますか？:
+    - text: "できるねと。自動車通学を希望する学生は全員駐車場が利用可能ねと。"
+  utter_近くには何がある?:
+    - text: "郵便局・コンビニ・公民館・泉駅・泉小学校などがあるねと"
+  utter_過去の就職先:
+    - text:  <a href="https://www.iwaki-cc.ac.jp/app/wp-content/uploads/2024/03/syusyoku-list-img.png">こちらが過去の就職先ねと</a>
+  utter_食堂:
+    - text: "食堂はないねと。でも不定期にパン屋さんが来るねと。"
+  utter_高校のように担任の先生がいるのですか?:
+    - text: "1年次、2年次でそれぞれ担任が受け持つことになるねと。2年次の担任は就職指導の先生と協同で就職のアドバイスするねと。"
+  utter_コンカレ:
+    - text: "コンカレの何についてしりたいねと？"
+  utter_入学について:
+    - text: <a href="https://www.iwaki-cc.ac.jp/bosyu/kikan_naiyou_houhou/">こちらが入学案内ねと</a>
+
+forms:
+  reservation_form:
+    required_slots:
+      - reserv_time
+
+actions:
+  - action_reservation_time
+  - action_today_fortune
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

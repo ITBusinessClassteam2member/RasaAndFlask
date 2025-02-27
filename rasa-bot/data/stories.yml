@@ -1,0 +1,201 @@
+version: "3.1"
+
+stories:
+
+- story: Greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_back
+
+- story: GoodEvening
+  steps:
+  - intent: goodevening
+  - action: utter_goodevening
+  - action: action_back
+
+- story: Ask Reservation
+  steps:
+  - intent: ask_reserve
+  - action: utter_reserve
+  - action: reservation_form
+  - active_loop: reservation_form
+
+- story: thankyou
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+  - action: action_back
+
+- story: CG演習_応答
+  steps:
+  - intent: CG演習
+  - action: utter_CG演習
+  - action: action_back
+
+- story: FEとPJの違い_応答
+  steps:
+  - intent: FEとPJの違い
+  - action: utter_FEとPJの違い
+  - action: action_back
+
+- story: インターネットは利用できますか？_応答
+  steps:
+  - intent: インターネットは利用できますか？
+  - action: utter_インターネットは利用できますか？
+  - action: action_back
+
+- story: オープンキャンパス_応答
+  steps:
+  - intent: オープンキャンパス
+  - action: utter_オープンキャンパス
+  - action: action_back
+
+- story: ゲーム制作_応答
+  steps:
+  - intent: ゲーム制作
+  - action: utter_ゲーム制作
+  - action: action_back
+
+- story: コンカレの中退率_応答
+  steps:
+  - intent: コンカレの中退率
+  - action: utter_コンカレの中退率
+  - action: action_back
+
+- story: パソコンを購入する必要がありますか？_応答
+  steps:
+  - intent: パソコンを購入する必要がありますか？
+  - action: utter_パソコンを購入する必要がありますか？
+  - action: action_back
+
+- story: パソコン初心者でも大丈夫なのか_応答
+  steps:
+  - intent: パソコン初心者でも大丈夫なのか
+  - action: utter_パソコン初心者でも大丈夫なのか
+  - action: action_back
+
+- story: パソコン講座_応答
+  steps:
+  - intent: パソコン講座
+  - action: utter_パソコン講座
+  - action: action_back
+
+- story: プログラミングは得意になりますか_応答
+  steps:
+  - intent: プログラミングは得意になりますか
+  - action: utter_プログラミングは得意になりますか
+  - action: action_back
+
+- story: 今ある課題の提出期限を教えて_応答
+  steps:
+  - intent: 今ある課題の提出期限を教えて
+  - action: utter_今ある課題の提出期限を教えて
+  - action: action_back
+
+- story: 出席は取るんですか？_応答
+  steps:
+  - intent: 出席は取るんですか？
+  - action: utter_出席は取るんですか？
+  - action: action_back
+
+- story: 夏休み、冬休み等はいつから、どれくらいありますか？_応答
+  steps:
+  - intent: 夏休み、冬休み等はいつから、どれくらいありますか？
+  - action: utter_夏休み、冬休み等はいつから、どれくらいありますか？
+  - action: action_back
+
+- story: 学生が主体になって行うイベントなどありますか？_応答
+  steps:
+  - intent: 学生が主体になって行うイベントなどありますか？
+  - action: utter_学生が主体になって行うイベントなどありますか？
+  - action: action_back
+
+- story: 年間行事_応答
+  steps:
+  - intent: 年間行事
+  - action: utter_年間行事
+  - action: action_back
+
+- story: 授業時間は何時から何時まで？_応答
+  steps:
+  - intent: 授業時間は何時から何時まで？
+  - action: utter_授業時間は何時から何時まで？
+  - action: action_back
+
+- story: 最寄駅から徒歩何分か_応答
+  steps:
+  - intent: 最寄駅から徒歩何分か
+  - action: utter_最寄駅から徒歩何分か
+  - action: action_back
+
+- story: 最寄駅から徒歩何分か_応答
+  steps:
+  - intent: 最寄駅から徒歩何分か
+  - action: utter_最寄駅から徒歩何分か
+  - action: action_back
+
+- story: 私たちの研究でSDGsに貢献できますか？_応答
+  steps:
+  - intent: 私たちの研究でSDGsに貢献できますか？
+  - action: utter_私たちの研究でSDGsに貢献できますか？
+  - action: action_back
+
+- story: 科目履修_応答
+  steps:
+  - intent: 科目履修
+  - action: utter_科目履修
+  - action: action_back
+
+- story: 翡翠ネトについて_応答
+  steps:
+  - intent: 翡翠ネトについて
+  - action: utter_翡翠ネトについて
+  - action: action_back
+
+- story: 車での通学はできますか？_応答
+  steps:
+  - intent: 車での通学はできますか？
+  - action: utter_車での通学はできますか？
+  - action: action_back
+
+- story: 近くには何がある?_応答
+  steps:
+  - intent: 近くには何がある?
+  - action: utter_近くには何がある?
+  - action: action_back
+
+- story: 過去の就職先_応答
+  steps:
+  - intent: 過去の就職先
+  - action: utter_過去の就職先
+  - action: action_back
+
+- story: 食堂_応答
+  steps:
+  - intent: 食堂
+  - action: utter_食堂
+  - action: action_back
+
+- story: 高校のように担任の先生がいるのですか?_応答
+  steps:
+  - intent: 高校のように担任の先生がいるのですか?
+  - action: utter_高校のように担任の先生がいるのですか?
+  - action: action_back
+
+- story: コンカレ_応答
+  steps:
+  - intent: コンカレ
+  - action: utter_コンカレ
+  - action: action_back
+
+- story: 入学について_応答
+  steps:
+  - intent: 入学について
+  - action: utter_入学について
+  - action: action_back
+
+- story: ユーザーが今日の運勢を問い合わせる
+  steps:
+  - intent: ask_fortune
+  - action: action_today_fortune
