@@ -5,7 +5,8 @@ import requests
 app = Flask(__name__)
 CORS(app)
 
-RASA_URL = "http://rasa:5005/webhooks/rest/webhook"  # RasaコンテナへのURL
+# RASA_URL = "http://rasa:5005/webhooks/rest/webhook"  # RasaコンテナへのURL
+RASA_URL = "https://RASA_rasaandflask.onrender.com/webhooks/rest/webhook"  # RasaコンテナへのURL
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
@@ -25,5 +26,5 @@ def webhook():
     except requests.exceptions.RequestException as e:
         return jsonify({"error": str(e)}), 500
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=5000)
