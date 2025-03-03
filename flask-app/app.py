@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import requests
 
@@ -7,6 +7,10 @@ CORS(app)
 
 # RASA_URL = "http://rasa:5005/webhooks/rest/webhook"  # RasaコンテナへのURL
 RASA_URL = "https://RASA_rasaandflask.onrender.com/webhooks/rest/webhook"  # RasaコンテナへのURL
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
